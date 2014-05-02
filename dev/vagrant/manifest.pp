@@ -54,6 +54,5 @@ file { "/home/vagrant/projects":
   ensure => 'directory',
   owner => 'vagrant',
   group => 'users',
-  mode => '0754',
-  require => Package['nginx'];
+  mode => '0754'
 }
