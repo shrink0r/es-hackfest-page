@@ -1,0 +1,224 @@
+# Puppet managed .bashrc file
+#
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
+    else
+    color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1='#VAGRANT-BOX ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='#VAGRANT-BOX ${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;#VAGRANT-BOX ${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# we want vim as default editor
+export EDITOR=vim
+
+# must press ctrl-D 2+1 times to exit shell
+export IGNOREEOF="2"
+
+# ignore case, long prompt, exit if it fits on one screen, allow colors for ls and grep colors
+export LESS="-iMFXR"
+
+# must use ">|filename" to force overwriting from now on
+shopt -o noclobber
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# append to the history file, don't overwrite it (on exit)
+shopt -s histappend
+
+# multi-line commands will be appended to history as a single-line command
+shopt -s cmdhist
+
+# must use ">|filename" to force overwriting (prevents output redirection using ">", ">&" and "<>" from overwriting existing files)
+shopt -o noclobber
+
+# don't put duplicate lines in the history or force ignoredups and ignorespace
+export HISTCONTROL=ignoredups:ignorespace
+
+# history buffer length
+export HISTSIZE=5000
+
+# history file length
+export HISTFILESIZE=10000
+
+# blacklist some sensitive history entries here if necessary (":" as separator)
+#export HISTIGNORE="&:[ ]*:truecrypt -P*:sudo*"
+export HISTIGNORE="&:[ ]*:ls:ll:la:[bf]g:exit:truecrypt -P*"
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# multi-line commands will be appended to history as a single-line command
+shopt -s cmdhist
+
+# we want vim as default editor
+export EDITOR=vim
+
+# trim paths to 3 hierarchy levels
+export PROMPT_DIRTRIM=3
+
+# must press ctrl-D 2+1 times to exit shell
+export IGNOREEOF="2"
+
+# ignore case, long prompt, exit if it fits on one screen
+export LESS="-iMFXR"
+
+#export GREP_OPTIONS='--color=auto'
+
+# base paths to use for "cd" command completion
+#export CDPATH=.:~:/etc
+
+# show statistics about current repository (authers, number of commits etc.)
+function git_stats {
+    if [ -n "$(git symbolic-ref HEAD 2> /dev/null)" ]; then
+        echo "Number of commits per author:"
+        git --no-pager shortlog -sn --all
+        AUTHORS=$( git shortlog -sn --all | cut -f2 | cut -f1 -d' ')
+        LOGOPTS=""
+        if [ "$1" == '-w' ]; then
+            LOGOPTS="$LOGOPTS -w"
+            shift
+        fi
+        if [ "$1" == '-M' ]; then
+            LOGOPTS="$LOGOPTS -M"
+            shift
+        fi
+        if [ "$1" == '-C' ]; then
+            LOGOPTS="$LOGOPTS -C --find-copies-harder"
+            shift
+        fi
+        for a in $AUTHORS
+        do
+            echo '-------------------'
+            echo "Statistics for: $a"
+            echo -n "Number of files changed: "
+            git log $LOGOPTS --all --numstat --format="%n" --author=$a | cut -f3 | sort -iu | wc -l
+            echo -n "Number of lines added: "
+            git log $LOGOPTS --all --numstat --format="%n" --author=$a | cut -f1 | awk '{s+=$1} END {print s}'
+            echo -n "Number of lines deleted: "
+            git log $LOGOPTS --all --numstat --format="%n" --author=$a | cut -f2 | awk '{s+=$1} END {print s}'
+            echo -n "Number of merges: "
+            git log $LOGOPTS --all --merges --author=$a | grep -c '^commit'
+        done
+    else
+        echo "you're currently not in a git repository"
+    fi
+}
+
+# ignore given pattern only locally (instead of using .gitignore)
+function git_local_ignore() {
+    echo "$1" >> .git/info/exclude
+}
+
+# show info about current working copy (e.g. if branches are up-to-date with remotes etc.)
+function git_info() {
+
+    if [ -n "$(git symbolic-ref HEAD 2> /dev/null)" ]; then
+        # print informations
+        echo "git repo overview"
+        echo "-----------------"
+        echo
+
+        # print all remotes and thier details
+        for remote in $(git remote show); do
+            echo $remote:
+            git remote show $remote
+            echo
+        done
+
+        # print status of working repo
+        echo "status:"
+        if [ -n "$(git status -s 2> /dev/null)" ]; then
+            git status -s
+        else
+            echo "working directory is clean"
+        fi
+
+        # print at least 5 last log entries
+        echo 
+        echo "log:"
+        git log -5 --oneline
+        echo 
+    else
+        echo "you're currently not in a git repository"
+    fi
+}
+
+# enable history (enabled by default for interactive shells)
+set -o history

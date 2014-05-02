@@ -1,0 +1,102 @@
+# navigation to parent directories should be easy
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+
+# some ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+# most recently modified files at bottom with human readable size
+alias lt='ls -lhart'
+
+alias svi="sudo vim"
+
+# show directories in $PATH
+alias path="echo -e ${PATH//:/\\n}"
+
+
+# time and date commands
+alias now='date +"%d-%m-%Y %T"'
+alias nowtime='date +"%T"'
+alias nowdate='date +"%d-%m-%Y"'
+
+# show current connections
+alias connections='sudo lsof -n -P -i +c 15'
+
+# show open udp/tcp ports
+alias ports='netstat -tulanp'
+
+# show sockets
+alias sockets='ss ; ss -s'
+
+# list IPs
+alias ips="ifconfig | grep -i 'inet ad' | cut -d: -f2 | cut -d' ' -f1"
+
+# list MAC addresses
+alias macs="ifconfig | grep -i hwad | awk '{print \$5}'"
+
+# human readable mounts list
+alias mounts='mount | column -t'
+
+# tail all logs
+alias logs="find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
+
+# list folders by size in current directory
+alias usage="du -h --max-depth=1 | sort -rh"
+
+# disk usage in current directory
+alias diskusage='du -ch 2> /dev/null |tail -1'
+
+# show total and human readable output of first level by default
+alias diskusage1='du -chd 1'
+
+# find biggest directories
+alias ducks='du -ck | sort -nr | head'
+
+# human readable with filesystem type by default
+alias diskfree='df -hT'
+
+# shows the individual partition usages without the temporary memory values
+alias diskfree1='df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs'
+
+# size of folder in current directory
+alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
+
+# poor man's tree version
+alias findtree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias filetree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+# colors of current bash
+alias showcolors='printf "\e[%dm%d dark\e[0m  \e[%d;1m%d bold\e[0m\n" {30..37}{,,,}'
+
+# show directories in $PATH
+alias path="echo -e ${PATH//:/\\n}"
+
+# list all iptables rules
+alias firewall='sudo /sbin/iptables -L -n -v --line-numbers'
+
+# only show active lines (not commented or blank), e.g. httpd.conf
+alias nocomment='grep -v -e "^$" -e"^ *#"'
+alias lines='grep -v -e "^$" -e"^ *#"'
+alias lines2='egrep -v "^\s*(#|$)"'
+
+# awk column print shorthand, e.g. print 2nd column: "df -h | fawk 2"
+function fawk {
+    first="awk '{print "
+    last="}' $2"
+    cmd="${first}\$${1}${last}"
+    echo $cmd
+    eval $cmd
+}
+
+# creates a simple http server within the current working directory on port 8080
+alias pyhttp='python -m SimpleHTTPServer 8080'
+alias serve='python -m SimpleHTTPServer 8080'
+
+

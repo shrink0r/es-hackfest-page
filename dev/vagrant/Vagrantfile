@@ -1,0 +1,33 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  # box-image settings
+  config.vm.box = "shrink0r/ubuntu-trusty-server-x64"     # vagrantcloud box
+  config.vm.box_url = "shrink0r/ubuntu-trusty-server-x64" # vagrantcloud box
+
+  # network settings
+  config.vm.network :private_network, type: :dhcp
+  config.ssh.forward_agent = true
+  config.vm.hostname = "es-hackfest-page.local"
+
+  # vbguest plugin settings
+  config.vbguest.auto_update = false
+
+  # virtualbox settings
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--name", "es-hackfest-trusty64"] # name for VirtualBox GUI
+    vb.customize ["modifyvm", :id, "--memory", 1024]
+  end
+
+  # setup shell provisioning, running only once every 48 hours
+  config.vm.provision :shell, :inline =>'[ "$(find /home/vagrant/ -maxdepth 1 -name apt_updated -mtime -48)" == "" ] && apt-get update --fix-missing && touch /home/vagrant/apt_updated; echo ""'
+
+  # setup puppet provisioning
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = "./"
+    puppet.manifest_file = "manifest.pp"
+    puppet.module_path = [ "../puppet/modules" ]
+    puppet.options = "--verbose --debug"
+  end
+end
