@@ -1,0 +1,103 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
+
+$default_font: "Source Sans Pro", Arial, sans-serif;
+
+@mixin font-weight($weight) {
+    $w: 400; /* "regular" */
+    @if
+        $weight == "light"    {$w: 200;}
+    @else if
+        $weight == "semibold" {$w: 600;}
+
+    font-weight: $w;
+}
+
+@mixin font-size($small, $large) {
+    @include media-query(desk) {
+        font-size: $large;
+    }
+}
+
+.headline-xlarge {
+    @include font-weight(light);
+    @include font-size(38px, 40px);
+    color: $grey-dark;
+
+    a {
+        color: inherit;
+    }
+}
+
+.headline-medium {
+    @include font-weight(regular);
+    @include font-size(18px, 21px);
+    color: $red4;
+}
+
+.headline-large {
+    @include font-weight(light);
+    @include font-size(26px, 30px);
+    color: $red4;
+}
+
+.headline-small {
+    @include font-weight(semibold);
+    @include font-size(14px, 19px);
+    color: $grey-dark;
+}
+
+html {
+    font-family: $default_font;
+    @include font-weight(regular);
+    @include font-size(14px, 16px);
+    color: $grey-neutral;
+}
+
+h1, h1 a {
+    @extend .headline-xlarge;
+}
+
+h2, h2 a {
+    @extend .headline-large;
+}
+
+h3, h3 a {
+    @extend .headline-medium;
+}
+
+h4,
+h5,
+h6 {
+}
+
+aside {
+    h1 {
+        @extend .headline-medium;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @extend .headline-small;
+    }
+}
+
+strong {
+    @include font-weight(semibold);
+}
+
+.breadcrumb {
+    @include font-weight(regular);
+    @include font-size(11px, 14px);
+}
+
+a {
+    color: $red1;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

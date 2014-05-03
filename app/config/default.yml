@@ -1,0 +1,7 @@
+environment: "production"
+name: "elasticsearch hackfest"
+markdown: rdiscount
+permalink: pretty
+pygments: true
+destination: pub
+source: site

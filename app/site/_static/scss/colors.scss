@@ -1,0 +1,54 @@
+$red1: #a51f02;
+$red2: #bc3101;
+$red3: #cb3c01;
+$red4: #da4801;
+$red5: #e85301;
+$red6: #f45d00;
+$red7: #ff7800;
+
+$grey-dark: #343538;
+$grey-neutral: #61646b; /* "mittelgrau" */
+$grey-light: #c2c2c2; /* "mittelgrau hell" */
+$grey-lighter: #e2e2e2; /* "hellgrau" */
+
+$black: #000;
+$white: #fff;
+
+$stripe-height: 10px;
+@mixin striped-line-edges() {
+    &:before {
+        content: " ";
+        display: block;
+        height: $stripe-height;
+        width: 100%;
+        $gradient-colors:
+          $red1 0%,
+          $red1 50%,
+          $red7 50%,
+          $red7 100%;
+        background-image: linear-gradient(to right, $gradient-colors);
+        background-image: -webkit-linear-gradient(left, $gradient-colors);
+    }
+}
+
+@mixin striped-line-center() {
+    &:before {
+        content: " ";
+        display: block;
+        margin-top: -$stripe-height;
+        height: $stripe-height;
+        width: 100%;
+        $gradient-colors:
+          $red2 20%,
+          $red3 20%,
+          $red3 40%,
+          $red4 40%,
+          $red4 60%,
+          $red5 60%,
+          $red5 80%,
+          $red6 80%;
+
+        background-image: linear-gradient(to right, $gradient-colors);
+        background-image: -webkit-linear-gradient(left, $gradient-colors);
+    }
+}

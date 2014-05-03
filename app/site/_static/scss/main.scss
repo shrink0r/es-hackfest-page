@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@import "vars";
+@import "inuit.css/inuit";
+@import "addons";
+
+@import "colors";
+@import "typography";
+
+.page-margin {
+    max-width: 980px;
+    margin: 0 auto;
+    padding-right:20px;
+    padding-left:20px;
+}
+
+.breadcrumb {
+    margin-left: $base-spacing-unit;
+    margin-bottom: 30px;
+    li {
+        margin-right: 3px;
+    }
+}
+
+.title a {
+    display: block;
+    margin-top: $base-spacing-unit;
+    text-indent: -99999em;
+    width: 440px;
+    height: 30px;
+    overflow: hidden;
+
+    @include media-query(palm) {
+        width: 160px;
+    }
+
+    background-image: url(/static/images/bo_logo.png);
+    @include retina(){
+        background-image:url(/static/images/bo_logo@2x.png);
+    }
+
+    background-size: 440px 30px;
+}
+
+.main {
+    padding-top: 30px;
+    padding-bottom: 4*$base-spacing-unit;
+    $gradient-top: #F1F1F1;
+    $gradient-bottom: #FFFFFF;
+    $gradient-height: 128px;
+    background: linear-gradient(to bottom, $gradient-top 0px, $gradient-bottom $gradient-height); /* W3C */
+    background: -webkit-linear-gradient(top, $gradient-top 0px, $gradient-bottom $gradient-height); /* W3C */
+}
+
+.home__teaser {
+    @extend .grid__item;
+    @extend .desk-one-third;
+    @extend .lap-one-third;
+    @extend .palm-one-whole;
+    text-align: center;
+    padding-bottom: $base-spacing-unit;
+    @include media-query(palm) {
+        border-bottom: 1px solid $grey-light;
+        padding-left: 0;
+        margin-left: 12px;
+        &:last-child {
+            border-bottom: 0 none;
+        }
+    }
+
+    h2 {
+        @include font-size(38px, 40px);
+
+        @include media-query(palm) {
+            margin-bottom: 0;
+            margin-top: 12px;
+        }
+    }
+}

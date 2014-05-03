@@ -1,0 +1,31 @@
+/*
+    These are snippets from unstable versions of inuit.css or other css libs
+*/
+
+/**
+ * Reversed grids
+ */
+.grid--rev {
+    @extend .grid;
+    direction:rtl;
+    text-align:right;
+
+    > .grid__item{
+        direction:ltr;
+        text-align:left;
+    }
+}
+
+@mixin retina {
+    @media print,
+    (-webkit-min-device-pixel-ratio:1.25),
+    (-o-min-device-pixel-ratio:5/4),
+    (min-resolution:120dpi){
+        @content;
+    }
+}
+
+.btn--link {
+    @extend .btn;
+    @extend .btn--hard;
+}
