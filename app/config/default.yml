@@ -1,8 +1,8 @@
-environment: "production"
-name: "elasticsearch hackfest"
+environment: production
+name: elasticsearch hackfest
 markdown: rdiscount
 permalink: pretty
 pygments: true
 destination: pub
 source: site
-baseurl: /es-hackfest-page
+baseurl: http://shrink0r.github.io/es-hackfest-page
