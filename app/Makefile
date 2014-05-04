@@ -12,10 +12,10 @@ scss_files := $(shell find site/_static/scss/ -type f -name '*.scss')
 # css compilation target
 css_file := pub/static/css/main.css
 
+all: html copy-static css
+
 deploy:
 	@HACKFEST_ENV='production' make all
-
-all: html copy-static css
 
 html:
 	@jekyll build --config $(jekyll_configs)

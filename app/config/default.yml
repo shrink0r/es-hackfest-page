@@ -5,3 +5,4 @@ permalink: pretty
 pygments: true
 destination: pub
 source: site
+baseurl: /es-hackfest-page
