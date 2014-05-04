@@ -1,0 +1,13 @@
+<div class="vevent">
+    <h2>
+        <a class="url" href="{{ page_url }}">{{ event.title }}</a>
+    </h2>
+    <div class="summary">{{ event.description }}</div>
+    <div class="date">
+        <h3>Date</h3>
+        <span class="dtstart">{{ event.start }}</span> to
+        <span class="dtend">{{ event.end }}</span>
+    </div>
+    {% assign location = event.location %}
+    {% include location.liquid %}
+</div>

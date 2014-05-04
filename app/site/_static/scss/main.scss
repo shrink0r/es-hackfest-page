@@ -14,37 +14,9 @@
     padding-left:20px;
 }
 
-.breadcrumb {
-    margin-left: $base-spacing-unit;
-    margin-bottom: 30px;
-    li {
-        margin-right: 3px;
-    }
-}
-
-.title a {
-    display: block;
-    margin-top: $base-spacing-unit;
-    text-indent: -99999em;
-    width: 440px;
-    height: 30px;
-    overflow: hidden;
-
-    @include media-query(palm) {
-        width: 160px;
-    }
-
-    background-image: url(/static/images/bo_logo.png);
-    @include retina(){
-        background-image:url(/static/images/bo_logo@2x.png);
-    }
-
-    background-size: 440px 30px;
-}
-
 .main {
     padding-top: 30px;
-    padding-bottom: 4*$base-spacing-unit;
+    padding-bottom: 1*$base-spacing-unit;
     $gradient-top: #F1F1F1;
     $gradient-bottom: #FFFFFF;
     $gradient-height: 128px;
@@ -52,28 +24,90 @@
     background: -webkit-linear-gradient(top, $gradient-top 0px, $gradient-bottom $gradient-height); /* W3C */
 }
 
-.home__teaser {
-    @extend .grid__item;
-    @extend .desk-one-third;
-    @extend .lap-one-third;
-    @extend .palm-one-whole;
-    text-align: center;
-    padding-bottom: $base-spacing-unit;
+.hero__unit {
+    @include vendor (box-shadow, 0 10px 25px rgba(0, 0, 0, 0.15));
+    margin-top: -30px;
+    margin-bottom: 12px;
+    padding-top: 20px;
+    min-height: 325px;
+    height: auto;
+    background: url(/static/images/hero_unit_bg_640.jpg) no-repeat 53% top scroll $grey-light;
+    background-size: auto auto;
+
+    h1 {
+        margin-bottom: 6px;
+    }
+
+    p {
+        font-size:120%;
+        @include font-weight("light");
+    }
+
     @include media-query(palm) {
-        border-bottom: 1px solid $grey-light;
-        padding-left: 0;
-        margin-left: 12px;
-        &:last-child {
-            border-bottom: 0 none;
+        display:table;
+        width:100%;
+        background: $green1;
+        @include retina(){
+            background-image: url(/static/images/hero_unit_bg_506@2x.jpg);
+            background-size: auto 100%;
+            background: $green1;
+        }
+        .page-margin {
+            display:table-cell;
+            vertical-align:middle;
         }
     }
 
-    h2 {
-        @include font-size(38px, 40px);
+    @include media-query(lap) {
+        background-image: url(/static/images/hero_unit_bg_1024.jpg);
+        padding-top: 90px;
+        min-height: 490px;
+        .page-margin {
+            max-width: 475px;
+        }
+    }
+    @include media-query(desk) {
+        background-image: url(/static/images/hero_unit_bg_1024.jpg);
+        background-size: 100% auto;
+        padding-top: 90px;
+        min-height: 500px;
+        @include retina(){
+            background-image:url(/static/images/hero_unit_bg.jpg);
+        }
+        .page-margin {
+            max-width: 525px;
+        }
+    }
+    @include media-query(desk-wide) {
+        background-image: url(/static/images/hero_unit_bg_2048.jpg);
+        background-position: center 37%;
+        .page-margin {
+            max-width: 750px;
+        }
+    }
 
-        @include media-query(palm) {
-            margin-bottom: 0;
-            margin-top: 12px;
+    h1, h2, h3, h4, h5, h6, p {
+        text-align: center;
+        color: $white;
+    }
+}
+
+.events {
+    list-style: none;
+    margin: 0;
+
+    .event {
+
+        h3 {
+            color: $grey-dark;
+        }
+
+        .date,
+        .location {
+            margin-top: 10px;
+        }
+        .location {
+            margin-bottom: 20px;
         }
     }
 }

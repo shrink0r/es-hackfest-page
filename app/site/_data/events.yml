@@ -1,0 +1,36 @@
+- {
+  title: 'Installation "Party"',
+  start: "Tuesday, May 27, 7pm",
+  end: "22pm",
+  location: {
+    name: "co.up",
+    street: "Adalbertstraße 8",
+    uzip: "10999 Berlin",
+    country: "Deutschland",
+  },
+  description: "If you have any issues installing Elasticsearch, Logstash or Kibana - or just want to have a nice evening with drinks and other Elasticsearchers - you are welcome at our usual Elasticsearch User Group meeting place: co_up (custom Google map)",
+}
+- {
+  title: "Main Event",
+  start: "Wednesday, May 28, 10 am",
+  end: "5.30 pm",
+  location: {
+    name: "Immobilien Scout GmbH",
+    street: "Andreasstraße 10",
+    uzip: "10243 Berlin",
+    country: "Deutschland",
+  },
+  description: "A day of hacking, fun and trying out new things. A great place to meet the Elasticsearch team and like-minded people.",
+}
+- {
+  title: "Aferparty",
+  start: "Wednesday, May 28,6 pm",
+  end: "10 pm",
+  location: {
+    name: "Immobilien Scout GmbH",
+    street: "Andreasstraße 10",
+    uzip: "10243 Berlin",
+    country: "Deutschland",
+  },
+  description: "Can't make it to the hackfest? Make it to the party. Conversations all around. In the middle of Friedrichshain, so we have a place to go afterwards.",
+}

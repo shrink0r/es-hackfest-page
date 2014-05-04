@@ -3,5 +3,25 @@ layout: default
 title: elasticsearch hackfest
 ---
 
-{% capture index_include %}{% include index.md %}{% endcapture %}
-{{ index_include | markdownify }}
+<div class="intro">
+    {% capture intro_text %}{% include texts/intro.md %}{% endcapture %}
+    {{ intro_text | markdownify }}
+</div>
+
+<ul class="events">
+    {% for event in site.data.events %}
+    <li class="event">
+      {% include event.liquid %}
+    </li>
+    {% endfor %}
+</ul>
+
+<div class="signup">
+    {% capture signup_text %}{% include texts/signup.md %}{% endcapture %}
+    {{ signup_text | markdownify }}
+</div>
+
+<div class="runby">
+    {% capture features_text %}{% include texts/features.md %}{% endcapture %}
+    {{ features_text | markdownify }}
+</div>
