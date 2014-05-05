@@ -1,3 +1,3 @@
-# ElasticSearch Hackfest - Berlin
+# Elasticsearch Hackfest - Berlin
 
 The start of a tradition.
