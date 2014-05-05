@@ -3,6 +3,8 @@ ElasticSearch Hackfest - Berlin
 
 Small website to host information for the upcoming elasticsearch hackfest in berlin.
 
+[http://shrink0r.github.io/es-hackfest-page](http://shrink0r.github.io/es-hackfest-page)
+
 ## Development
 
 You may either develop locally or you can use the provided vagrant setup.
