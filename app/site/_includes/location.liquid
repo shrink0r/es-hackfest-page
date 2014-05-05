@@ -1,11 +1,14 @@
-<div class="location vcard hcard">
+<div class="location vcard">
     <div class="org">
         <h3>Location</h3>
         <div class="fn organization-name">{{ location.name }}</div>
         <div class="adr">
             <div class="street-adress">{{ location.street }}</div>
-            <div class="postal-code">{{ location.uzip }}</div>
-            <div class="country">{{ location.country }}</div>
+            <div>
+                <span class="postal-code">{{ location.uzip }}</span> 
+                <span class="locality">{{ location.city }}</span>
+            </div>
+            <div class="country-name">{{ location.country }}</div>
         </div>
     </div>
 </div>
