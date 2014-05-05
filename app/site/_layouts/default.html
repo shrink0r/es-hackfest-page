@@ -3,7 +3,10 @@
     <head>
         <!-- environment: {{site.environment}} -->
         <meta charset="utf-8">
-        <title>{{page.title}} – {{ site.name }}</title>
+        <title>{{page.title}}</title>
+        {% if page.description != empty %}
+        <meta name="description" content="{{ page.description }}" />
+        {% endif %}
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         {% if site.baseurl != empty %}

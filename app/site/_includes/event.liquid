@@ -5,8 +5,12 @@
     <div class="summary">{{ event.description }}</div>
     <div class="date">
         <h3>Date</h3>
-        <span class="dtstart">{{ event.start }}</span> to
-        <span class="dtend">{{ event.end }}</span>
+        <div class="technical-date">
+            <span class="dtstart">{{ event.start }}</span>
+            <span class="dtend">{{ event.end }}</span>
+        </div>
+        <span>{{ event.start | date: "%A, %b %d, %I:%M %p" }}</span> to
+        <span>{{ event.start | date: "%I:%M %p" }}</span>
     </div>
     {% assign location = event.location %}
     {% include location.liquid %}

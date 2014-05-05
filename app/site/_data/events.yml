@@ -1,8 +1,8 @@
 - {
   url: "http://www.meetup.com/Elasticsearch-UG-Berlin/",
   title: 'Installation "Party"',
-  start: "Tuesday, May 27, 7pm",
-  end: "22pm",
+  start: "2014-05-27 7:00 PM",
+  end: "2014-05-27 10:00 PM",
   location: {
     name: "co.up",
     street: "Adalbertstraße 8",
@@ -15,8 +15,8 @@
 - {
   url: "http://www.meetup.com/Elasticsearch-UG-Berlin/events/143792002/",
   title: "Main Event",
-  start: "Wednesday, May 28, 10 am",
-  end: "5.30 pm",
+  start: "2014-05-28 10:00 AM",
+  end: "2014-05-28 5:30 PM",
   location: {
     name: "Immobilien Scout GmbH",
     street: "Andreasstraße 10",
@@ -29,8 +29,8 @@
 - {
   url: "http://www.meetup.com/Elasticsearch-UG-Berlin/events/143792002/",
   title: "Aferparty",
-  start: "Wednesday, May 28,6 pm",
-  end: "10 pm",
+  start: "2014-05-28 06:00 PM",
+  end: "2014-05-28 10:00 PM",
   location: {
     name: "Immobilien Scout GmbH",
     street: "Andreasstraße 10",
