@@ -1,0 +1,24 @@
+- {
+    name: "Asquera",
+    url: "http://asquera.de",
+    role: "Organizers of the Elasticsearch UG Berlin",
+    logo: "asq_logo.jpg",
+}
+- {
+    name: "BerlinOnline",
+    url: "http://berlinonline.net",
+    role: "Dataset providers",
+    logo: "",
+}
+- {
+    name: "Syseleven",
+    url: "http://syseleven.de",
+    role: "Server providers",
+    logo: "",
+}
+- {
+    name: "Elasticsearch",
+    url: "http://elasticsearch.com",
+    role: "The reason why we are here. Providers of food and beverages.",
+    logo: "elasticsearch_logo.jpg",
+}

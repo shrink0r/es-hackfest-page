@@ -61,7 +61,7 @@
     @include media-query(lap) {
         background-image: url(../images/hero_unit_bg_1024.jpg);
         padding-top: 90px;
-        min-height: 490px;
+        min-height: 370px;
         .page-margin {
             max-width: 475px;
         }
@@ -70,7 +70,7 @@
         background-image: url(../images/hero_unit_bg_1024.jpg);
         background-size: 100% auto;
         padding-top: 90px;
-        min-height: 500px;
+        min-height: 315px;
         @include retina(){
             background-image:url(../images/hero_unit_bg.jpg);
         }

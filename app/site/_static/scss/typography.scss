@@ -31,13 +31,15 @@ $default_font: "Source Sans Pro", Arial, sans-serif;
 .headline-medium {
     @include font-weight(regular);
     @include font-size(18px, 21px);
-    color: $red4;
+    color: $green1;
+    text-shadow: -1px 1px 0 rgba(223, 223, 223,0.7);
 }
 
 .headline-large {
     @include font-weight(light);
     @include font-size(26px, 30px);
-    color: $red4;
+    color: $green1;
+    text-shadow: -1px 1px 0 rgba(223, 223, 223,0.7);
 }
 
 .headline-small {
@@ -92,13 +94,8 @@ strong {
     @include font-weight(semibold);
 }
 
-.breadcrumb {
-    @include font-weight(regular);
-    @include font-size(11px, 14px);
-}
-
 a {
-    color: $red1;
+    color: $blue1;
     text-decoration: none;
 
     &:hover {
