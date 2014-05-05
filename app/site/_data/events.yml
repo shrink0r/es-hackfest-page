@@ -1,5 +1,5 @@
 - {
-  url: "http://www.meetup.com/Elasticsearch-UG-Berlin/",
+  name: "installation-party",
   title: 'Installation "Party"',
   start: "2014-05-27 7:00 PM",
   end: "2014-05-27 10:00 PM",
@@ -13,7 +13,7 @@
   description: "If you have any issues installing Elasticsearch, Logstash or Kibana - or just want to have a nice evening with drinks and other Elasticsearchers - you are welcome at our usual Elasticsearch User Group meeting place: co_up (custom Google map)",
 }
 - {
-  url: "http://www.meetup.com/Elasticsearch-UG-Berlin/events/143792002/",
+  name: "main-event",
   title: "Main Event",
   start: "2014-05-28 10:00 AM",
   end: "2014-05-28 5:30 PM",
@@ -27,7 +27,7 @@
   description: "A day of hacking, fun and trying out new things. A great place to meet the Elasticsearch team and like-minded people.",
 }
 - {
-  url: "http://www.meetup.com/Elasticsearch-UG-Berlin/events/143792002/",
+  name: "afterparty",
   title: "Aferparty",
   start: "2014-05-28 06:00 PM",
   end: "2014-05-28 10:00 PM",
