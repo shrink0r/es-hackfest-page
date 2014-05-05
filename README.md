@@ -1,4 +1,4 @@
-ElasticSearch Hackfest - Berlin
+Elasticsearch Hackfest - Berlin
 ================
 
 Small website to host information for the upcoming elasticsearch hackfest in berlin.

@@ -1,4 +1,4 @@
-## ElasticSearch Hackfest
+## Elasticsearch Hackfest
 
 One is an event, two is a repeat, three is tradition.  
 Following up last years successful event, we will have
