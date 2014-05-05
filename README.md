@@ -52,9 +52,9 @@ Clone repository
 ```git clone git@github.com:shrink0r/es-hackfest-page.git```  
 ```cd es-hackfest-page/app```
 
-The site can now be built by calling: ```make```.
+After making changes to the site, you must deploy by calling: ```make```.
 
 ## Deploying changes
 
-After editing content or developing some changes to the site, you need to redeploy by calling ```make deploy``` from the app directory.  
+When you have finished making changes to the site and want to publish them call ```make deploy```.
 Then copy and commit the pub directory's contents to the gh-pages branch.
