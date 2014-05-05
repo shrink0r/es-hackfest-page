@@ -28,7 +28,7 @@
 }
 - {
   name: "afterparty",
-  title: "Aferparty",
+  title: "Afterparty",
   start: "2014-05-28 06:00 PM",
   end: "2014-05-28 10:00 PM",
   location: {
