@@ -31,7 +31,7 @@
     padding-top: 20px;
     min-height: 325px;
     height: auto;
-    background: url(/static/images/hero_unit_bg_640.jpg) no-repeat 53% top scroll $grey-light;
+    background: url(../images/hero_unit_bg_640.jpg) no-repeat 53% top scroll $grey-light;
     background-size: auto auto;
 
     h1 {
@@ -48,7 +48,7 @@
         width:100%;
         background: $green1;
         @include retina(){
-            background-image: url(/static/images/hero_unit_bg_506@2x.jpg);
+            background-image: url(../images/hero_unit_bg_506@2x.jpg);
             background-size: auto 100%;
             background: $green1;
         }
@@ -59,7 +59,7 @@
     }
 
     @include media-query(lap) {
-        background-image: url(/static/images/hero_unit_bg_1024.jpg);
+        background-image: url(../images/hero_unit_bg_1024.jpg);
         padding-top: 90px;
         min-height: 490px;
         .page-margin {
@@ -67,19 +67,19 @@
         }
     }
     @include media-query(desk) {
-        background-image: url(/static/images/hero_unit_bg_1024.jpg);
+        background-image: url(../images/hero_unit_bg_1024.jpg);
         background-size: 100% auto;
         padding-top: 90px;
         min-height: 500px;
         @include retina(){
-            background-image:url(/static/images/hero_unit_bg.jpg);
+            background-image:url(../images/hero_unit_bg.jpg);
         }
         .page-margin {
             max-width: 525px;
         }
     }
     @include media-query(desk-wide) {
-        background-image: url(/static/images/hero_unit_bg_2048.jpg);
+        background-image: url(../images/hero_unit_bg_2048.jpg);
         background-position: center 37%;
         .page-margin {
             max-width: 750px;

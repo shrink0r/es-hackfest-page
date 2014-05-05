@@ -3211,7 +3211,7 @@ a {
   padding-top: 20px;
   min-height: 325px;
   height: auto;
-  background: url(/static/images/hero_unit_bg_640.jpg) no-repeat 53% top scroll #c2c2c2;
+  background: url(../images/hero_unit_bg_640.jpg) no-repeat 53% top scroll #c2c2c2;
   background-size: auto auto; }
   .hero__unit h1 {
     margin-bottom: 6px; }
@@ -3226,7 +3226,7 @@ a {
       background: #74b73f; } }
   @media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 5 / 4), only screen and (max-width: 480px) and (min-resolution: 120dpi) {
     .hero__unit {
-      background-image: url(/static/images/hero_unit_bg_506@2x.jpg);
+      background-image: url(../images/hero_unit_bg_506@2x.jpg);
       background-size: auto 100%;
       background: #74b73f; } }
   @media only screen and (max-width: 480px) {
@@ -3235,26 +3235,26 @@ a {
         vertical-align: middle; } }
   @media only screen and (min-width: 481px) and (max-width: 799px) {
     .hero__unit {
-      background-image: url(/static/images/hero_unit_bg_1024.jpg);
+      background-image: url(../images/hero_unit_bg_1024.jpg);
       padding-top: 90px;
       min-height: 490px; }
       .hero__unit .page-margin {
         max-width: 475px; } }
   @media only screen and (min-width: 800px) {
     .hero__unit {
-      background-image: url(/static/images/hero_unit_bg_1024.jpg);
+      background-image: url(../images/hero_unit_bg_1024.jpg);
       background-size: 100% auto;
       padding-top: 90px;
       min-height: 500px; } }
   @media only screen and (min-width: 800px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 800px) and (-o-min-device-pixel-ratio: 5 / 4), only screen and (min-width: 800px) and (min-resolution: 120dpi) {
     .hero__unit {
-      background-image: url(/static/images/hero_unit_bg.jpg); } }
+      background-image: url(../images/hero_unit_bg.jpg); } }
   @media only screen and (min-width: 800px) {
       .hero__unit .page-margin {
         max-width: 525px; } }
   @media only screen and (min-width: 1200px) {
     .hero__unit {
-      background-image: url(/static/images/hero_unit_bg_2048.jpg);
+      background-image: url(../images/hero_unit_bg_2048.jpg);
       background-position: center 37%; }
       .hero__unit .page-margin {
         max-width: 750px; } }
