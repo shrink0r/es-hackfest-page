@@ -10,7 +10,7 @@
             <span class="dtend">{{ event.end }}</span>
         </div>
         <span>{{ event.start | date: "%A, %b %d, %I:%M %p" }}</span> to
-        <span>{{ event.start | date: "%I:%M %p" }}</span>
+        <span>{{ event.end | date: "%I:%M %p" }}</span>
     </div>
     {% assign location = event.location %}
     {% include location.liquid %}
