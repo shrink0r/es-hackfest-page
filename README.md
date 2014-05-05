@@ -33,7 +33,9 @@ Ssh into dev box and setup project
 ```git clone git@github.com:shrink0r/es-hackfest-page.git```  
 ```cd es-hackfest-page/app```
 
-The site can now be built by calling: ```make``` and should be available at: [http://es-hackfest-page.local](http://es-hackfest-page.local)
+An nfs share is provided under ```nfs://es-hackfest-page.local/home/vagrant/projects/```  
+The site itself is hosted at [http://es-hackfest-page.local](http://es-hackfest-page.local).  
+In order to deploy changes to the site during development call ```make``` inside the app directory.
 
 ### Developing locally
 
