@@ -1,0 +1,21 @@
+<h2>Run by</h2>
+
+<div class="grid">
+    {% for supporter in site.data.supporters %}
+    <div class="grid__item desk-one-quarter lap-one-third palm-one-whole">
+        <div class="supporter {{ supporter.name | downcase }}">
+            <a href="{{ supporter.url }}">
+                <div class="supporter-logo">
+                    <div class="supporter-logo__image_box">
+                        {% if supporter.logo != empty %}
+                        <img class="supporter-logo__image" src="static/images/logos/{{ supporter.logo }}" title="{{ supporter.name }}" />
+                        {% endif %}
+                    </div>
+                    <span class="supporter-name">{{ supporter.name }}</span>
+                </div>
+            </a>
+            <span class="supporter-role">{{ supporter.role }}</span>
+        </div>
+    </div>
+    {% endfor %}
+</div>

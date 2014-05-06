@@ -1,0 +1,27 @@
+
+.supporters {
+
+    .supporter {
+
+        border: 1px solid $grey-light;
+        border-radius: 2px;
+        padding: 1rem;
+
+        .supporter-logo {
+            width: 128px;
+
+            .supporter-logo__image_box {
+
+                height: 5rem;
+
+                .supporter-logo__image {
+                    width: 128px;
+                }
+            }
+
+            &.asquera {
+                width: 64px;
+            }
+        }
+    }
+}

@@ -3254,6 +3254,19 @@ a {
   .events .event .location {
     margin-bottom: 20px; }
 
+.supporters .supporter {
+  border: 1px solid #c2c2c2;
+  border-radius: 2px;
+  padding: 1rem; }
+  .supporters .supporter .supporter-logo {
+    width: 128px; }
+    .supporters .supporter .supporter-logo .supporter-logo__image_box {
+      height: 5rem; }
+      .supporters .supporter .supporter-logo .supporter-logo__image_box .supporter-logo__image {
+        width: 128px; }
+    .supporters .supporter .supporter-logo.asquera {
+      width: 64px; }
+
 .page-footer {
   color: white;
   background-color: #74b73f;
