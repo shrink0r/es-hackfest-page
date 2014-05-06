@@ -377,7 +377,7 @@
 /*
  * Correct `block` display not defined in IE 8/9.
  */
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
 article,
 aside,
 details,
@@ -3112,9 +3112,6 @@ html.flexbox {
     direction: ltr;
     text-align: left; }
 
-/* "mittelgrau" */
-/* "mittelgrau hell" */
-/* "hellgrau" */
 .headline-xlarge, h1, h1 a {
   /* "regular" */
   font-weight: 200;
@@ -3176,7 +3173,7 @@ strong {
   font-weight: 600; }
 
 a {
-  color: #2980b9;
+  color: #27ae60;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -3269,3 +3266,19 @@ a {
     margin-top: 10px; }
   .events .event .location {
     margin-bottom: 20px; }
+
+.page-footer {
+  color: white;
+  background-color: #74b73f;
+  padding-top: 24px;
+  padding-bottom: 24px; }
+  .page-footer h4 {
+    margin-bottom: 0.5rem; }
+  .page-footer p {
+    margin: 0; }
+  .page-footer a {
+    color: white;
+    text-decoration: underline;
+    font-style: italic; }
+  .page-footer .address {
+    margin-bottom: 0.5rem; }

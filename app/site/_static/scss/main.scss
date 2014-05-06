@@ -115,3 +115,29 @@
         }
     }
 }
+
+.page-footer {
+    color: $white;
+    background-color: $green1;
+    padding-top: $base-spacing-unit;
+    padding-bottom: $base-spacing-unit;
+
+    h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: $white;
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    .address {
+        margin-bottom: 0.5rem;
+    }
+}
+

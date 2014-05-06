@@ -32,20 +32,6 @@
         <![endif]-->
     </head>
     <body>
-
-        <div class="main">
-
-            <div class="hero__unit">
-                <div class="page-margin">
-                    {% capture herounit_text %}{% include texts/herounit.md %}{% endcapture %}
-                    {{ herounit_text | markdownify }}
-                </div>
-            </div>
-
-            <div class="page-margin default-page">
-                {{ content }}
-            </div>
-        </div>
-
+        {{ content }}
     </body>
 </html>
