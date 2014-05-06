@@ -3178,20 +3178,6 @@ a {
   a:hover {
     text-decoration: underline; }
 
-.page-margin {
-  max-width: 980px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px; }
-
-.main {
-  padding-top: 30px;
-  padding-bottom: 24px;
-  background: linear-gradient(to bottom, #f1f1f1 0px, white 128px);
-  /* W3C */
-  background: -webkit-linear-gradient(top, #f1f1f1 0px, white 128px);
-  /* W3C */ }
-
 .hero__unit {
   -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -3205,9 +3191,11 @@ a {
   height: auto;
   background: url(../images/hero_unit_bg_640.jpg) no-repeat 53% top scroll #c2c2c2;
   background-size: auto auto; }
-  .hero__unit h1 {
+  .hero__unit a:hover {
+    text-decoration: none; }
+  .hero__unit a h1 {
     margin-bottom: 6px; }
-  .hero__unit p {
+  .hero__unit a p {
     font-size: 120%;
     /* "regular" */
     font-weight: 200; }
@@ -3281,3 +3269,20 @@ a {
     text-decoration: underline; }
   .page-footer .address {
     margin-bottom: 0.5rem; }
+
+.page-margin {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px; }
+
+.main {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  background: linear-gradient(to bottom, #f1f1f1 0px, white 128px);
+  /* W3C */
+  background: -webkit-linear-gradient(top, #f1f1f1 0px, white 128px);
+  /* W3C */ }
+
+.impress .legal {
+  margin-top: 24px; }

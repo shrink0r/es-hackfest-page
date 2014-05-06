@@ -7,6 +7,10 @@
 @import "colors";
 @import "typography";
 
+@import "herounit";
+@import "events";
+@import "footer";
+
 .page-margin {
     max-width: 980px;
     margin: 0 auto;
@@ -24,119 +28,9 @@
     background: -webkit-linear-gradient(top, $gradient-top 0px, $gradient-bottom $gradient-height); /* W3C */
 }
 
-.hero__unit {
-    @include vendor (box-shadow, 0 10px 25px rgba(0, 0, 0, 0.15));
-    margin-top: -30px;
-    margin-bottom: 12px;
-    padding-top: 20px;
-    min-height: 325px;
-    height: auto;
-    background: url(../images/hero_unit_bg_640.jpg) no-repeat 53% top scroll $grey-light;
-    background-size: auto auto;
+.impress {
 
-    h1 {
-        margin-bottom: 6px;
-    }
-
-    p {
-        font-size:120%;
-        @include font-weight("light");
-    }
-
-    @include media-query(palm) {
-        display:table;
-        width:100%;
-        background: $green1;
-        @include retina(){
-            background-image: url(../images/hero_unit_bg_506@2x.jpg);
-            background-size: auto 100%;
-            background: $green1;
-        }
-        .page-margin {
-            display:table-cell;
-            vertical-align:middle;
-        }
-    }
-
-    @include media-query(lap) {
-        background-image: url(../images/hero_unit_bg_1024.jpg);
-        padding-top: 90px;
-        min-height: 370px;
-        .page-margin {
-            max-width: 475px;
-        }
-    }
-    @include media-query(desk) {
-        background-image: url(../images/hero_unit_bg_1024.jpg);
-        background-size: 100% auto;
-        padding-top: 90px;
-        min-height: 315px;
-        @include retina(){
-            background-image:url(../images/hero_unit_bg.jpg);
-        }
-        .page-margin {
-            max-width: 525px;
-        }
-    }
-    @include media-query(desk-wide) {
-        background-image: url(../images/hero_unit_bg_2048.jpg);
-        background-position: center 37%;
-        .page-margin {
-            max-width: 750px;
-        }
-    }
-
-    h1, h2, h3, h4, h5, h6, p {
-        text-align: center;
-        color: $white;
+    .legal {
+        margin-top: $base-spacing-unit;
     }
 }
-
-.events {
-    list-style: none;
-    margin: 0;
-
-    .event {
-
-        h3 {
-            color: $grey-dark;
-        }
-
-        .technical-date {
-            display: none;
-        }
-
-        .date,
-        .location {
-            margin-top: 10px;
-        }
-        .location {
-            margin-bottom: 20px;
-        }
-    }
-}
-
-.page-footer {
-    color: $white;
-    background-color: $green1;
-    padding-top: $base-spacing-unit;
-    padding-bottom: $base-spacing-unit;
-
-    h4 {
-        margin-bottom: 0.5rem;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    a {
-        color: $white;
-        text-decoration: underline;
-    }
-
-    .address {
-        margin-bottom: 0.5rem;
-    }
-}
-

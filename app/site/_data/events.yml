@@ -8,7 +8,7 @@
     street: "Adalbertstraße 8",
     uzip: "10999",
     city: "Berlin",
-    country: "Deutschland",
+    country: "Germany",
   },
   description: "If you have any issues installing Elasticsearch, Logstash or Kibana - or just want to have a nice evening with drinks and other Elasticsearchers - you are welcome at our usual Elasticsearch User Group meeting place: co_up (custom Google map)",
 }
@@ -22,7 +22,7 @@
     street: "Andreasstraße 10",
     uzip: "10243",
     city: "Berlin",
-    country: "Deutschland",
+    country: "Germany",
   },
   description: "A day of hacking, fun and trying out new things. A great place to meet the Elasticsearch team and like-minded people.",
 }
@@ -36,7 +36,7 @@
     street: "Andreasstraße 10",
     uzip: "10243",
     city: "Berlin",
-    country: "Deutschland",
+    country: "Germany",
   },
   description: "Can't make it to the hackfest? Make it to the party. Conversations all around. In the middle of Friedrichshain, so we have a place to go afterwards.",
 }

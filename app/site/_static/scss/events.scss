@@ -1,0 +1,24 @@
+
+.events {
+    list-style: none;
+    margin: 0;
+
+    .event {
+
+        h3 {
+            color: $grey-dark;
+        }
+
+        .technical-date {
+            display: none;
+        }
+
+        .date,
+        .location {
+            margin-top: 10px;
+        }
+        .location {
+            margin-bottom: 20px;
+        }
+    }
+}

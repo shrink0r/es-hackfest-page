@@ -3,12 +3,7 @@ layout: default
 ---
 
 <div class="main">
-    <div class="hero__unit">
-        <div class="page-margin">
-            {% capture herounit_text %}{% include texts/herounit.md %}{% endcapture %}
-            {{ herounit_text | markdownify }}
-        </div>
-    </div>
+    {% include herounit.liquid %}
 
     <div class="page-margin default-page">
         {{ content }}

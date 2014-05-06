@@ -1,0 +1,8 @@
+<div class="hero__unit">
+    <div class="page-margin">
+        <a href="{{ site.baseurl }}">
+            {% capture herounit_text %}{% include texts/herounit.md %}{% endcapture %}
+            {{ herounit_text | markdownify }}
+        </a>
+    </div>
+</div>
