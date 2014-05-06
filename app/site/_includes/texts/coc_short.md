@@ -10,4 +10,4 @@ Our hackfest is dedicated to providing a harassment-free hackfest  experience fo
 We do not tolerate harassment of hackfest participants in any form.
 Sexual language and imagery is not appropriate for any hackfest venue, including talks, workshops, parties, Twitter and other online media. Hackfest participants violating these rules may be sanctioned or expelled from the hackfest at the discretion of the organisers.
 
-[The long version](coc/)
+[The less quick version](coc/)

@@ -3125,8 +3125,7 @@ html.flexbox {
 .headline-medium, h3, h3 a, aside h1 {
   /* "regular" */
   font-weight: 400;
-  color: #74b73f;
-  text-shadow: -1px 1px 0 rgba(223, 223, 223, 0.7); }
+  color: #74b73f; }
   @media only screen and (min-width: 800px) {
     .headline-medium, h3, h3 a, aside h1 {
       font-size: 21px; } }
@@ -3135,7 +3134,7 @@ html.flexbox {
   /* "regular" */
   font-weight: 200;
   color: #74b73f;
-  text-shadow: -1px 1px 0 rgba(223, 223, 223, 0.7); }
+  text-shadow: -1px 1px 0 rgba(68, 107, 37, 0.3); }
   @media only screen and (min-width: 800px) {
     .headline-large, h2, h2 a {
       font-size: 30px; } }
