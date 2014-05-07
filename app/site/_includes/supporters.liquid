@@ -1,8 +1,27 @@
 <h2>Run by</h2>
 
 <div class="grid">
-    {% for supporter in site.data.supporters %}<!--
-   --><div class="grid__item desk-one-quarter lap-one-third palm-one-whole">
+    {% comment %}
+    The first supporter-entry is considered as the main supporter and gets it's own row.
+    {% endcomment %}
+    <div class="grid__item desk-one-whole lap-one-whole palm-one-whole">
+    {% assign supporter = site.data.supporters[0] %}
+        <div class="supporter supporter-main {{ supporter.name | downcase }}">
+            <a href="{{ supporter.url }}">
+                <div class="supporter-logo">
+                    <div class="supporter-logo__image_box">
+                        {% if supporter.logo != empty %}
+                        <img class="supporter-logo__image" src="static/images/logos/{{ supporter.logo }}" title="{{ supporter.name }}" />
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+            <span class="supporter-role">{{ supporter.role }}</span>
+        </div>
+    </div>
+
+    {% for supporter in site.data.supporters %}{% if forloop.first != true %}<!--
+   --><div class="grid__item desk-one-quarter lap-one-half palm-one-whole">
         <div class="supporter {{ supporter.name | downcase }}">
             <a href="{{ supporter.url }}">
                 <div class="supporter-logo">
@@ -17,5 +36,5 @@
             <span class="supporter-role">{{ supporter.role }}</span>
         </div>
     </div><!--
-    -->{% endfor %}
+    -->{% endif %}{% endfor %}
 </div>

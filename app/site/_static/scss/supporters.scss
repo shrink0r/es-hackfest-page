@@ -25,6 +25,17 @@
             }
         }
 
+        &.supporter-main {
+            .supporter-logo__image_box {
+
+                height: 2rem;
+
+                .supporter-logo__image {
+                    width: auto;
+                }
+            }
+        }
+
         &.asquera {
 
             .supporter-logo__image_box {

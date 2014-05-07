@@ -3173,7 +3173,7 @@ strong {
 
 a {
   color: #74b73f;
-  text-decoration: none; }
+  text-decoration: underline; }
   a:hover {
     text-decoration: underline; }
 
@@ -3228,6 +3228,10 @@ a {
       height: 5rem; }
       .supporters .supporter .supporter-logo .supporter-logo__image_box .supporter-logo__image {
         width: 128px; }
+  .supporters .supporter.supporter-main .supporter-logo__image_box {
+    height: 2rem; }
+    .supporters .supporter.supporter-main .supporter-logo__image_box .supporter-logo__image {
+      width: auto; }
   .supporters .supporter.asquera .supporter-logo__image_box .supporter-logo__image {
     width: 64px; }
 
