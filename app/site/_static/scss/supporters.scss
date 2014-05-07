@@ -1,11 +1,16 @@
 
 .supporters {
 
+    .grid {
+        margin-top: -1rem;
+    }
+
     .supporter {
 
         border: 1px solid $grey-light;
         border-radius: 2px;
         padding: 1rem;
+        margin-top: 1rem;
 
         .supporter-logo {
             width: 128px;
@@ -18,9 +23,15 @@
                     width: 128px;
                 }
             }
+        }
 
-            &.asquera {
-                width: 64px;
+        &.asquera {
+
+            .supporter-logo__image_box {
+
+                .supporter-logo__image {
+                    width: 64px;
+                }
             }
         }
     }

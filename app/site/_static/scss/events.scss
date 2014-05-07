@@ -5,6 +5,8 @@
 
     .event {
 
+        margin-bottom: $base-spacing-unit;
+
         h3 {
             color: $grey-dark;
         }
@@ -13,12 +15,16 @@
             display: none;
         }
 
-        .date,
-        .location {
-            margin-top: 10px;
+        .date {
+            margin-top: 1rem;
         }
+
         .location {
-            margin-bottom: 20px;
+            margin-top: 1rem;
+
+            .adr {
+                margin-bottom: 1rem;
+            }
         }
     }
 }

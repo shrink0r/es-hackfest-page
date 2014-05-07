@@ -3,12 +3,15 @@
         <h3>Location</h3>
         <div class="fn organization-name">{{ location.name }}</div>
         <div class="adr">
-            <div class="street-adress">{{ location.street }}</div>
-            <div>
-                <span class="postal-code">{{ location.uzip }}</span> 
-                <span class="locality">{{ location.city }}</span>
-            </div>
-            <div class="country-name">{{ location.country }}</div>
+            <span class="street-adress">{{ location.street }}</span> -
+            <span class="postal-code">{{ location.uzip }}</span>
+            <span class="locality">{{ location.city }}</span> -
+            <span class="country-name">{{ location.country }}</span>
         </div>
+        {% if location.map %}
+        <a href="{{ location.map.url }}" title="view on google-maps">
+            <img src="{{ location.map.image }}" />
+        </a>
+        {% endif %}
     </div>
 </div>

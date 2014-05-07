@@ -3205,7 +3205,7 @@ a {
       background: #74b73f; } }
   @media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 5 / 4), only screen and (max-width: 480px) and (min-resolution: 120dpi) {
     .hero__unit {
-      background-image: url(../images/hero_unit_bg_506@2x.jpg);
+      background-image: url(../images/hero_unit_bg_506.jpg);
       background-size: auto 100%;
       background: #74b73f; } }
   @media only screen and (max-width: 480px) {
@@ -3216,7 +3216,7 @@ a {
     .hero__unit {
       background-image: url(../images/hero_unit_bg_1024.jpg);
       padding-top: 90px;
-      min-height: 370px; }
+      min-height: 490px; }
       .hero__unit .page-margin {
         max-width: 475px; } }
   @media only screen and (min-width: 800px) {
@@ -3224,10 +3224,7 @@ a {
       background-image: url(../images/hero_unit_bg_1024.jpg);
       background-size: 100% auto;
       padding-top: 90px;
-      min-height: 315px; } }
-  @media only screen and (min-width: 800px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 800px) and (-o-min-device-pixel-ratio: 5 / 4), only screen and (min-width: 800px) and (min-resolution: 120dpi) {
-    .hero__unit {
-      background-image: url(../images/hero_unit_bg.jpg); } }
+      min-height: 500px; } }
   @media only screen and (min-width: 800px) {
       .hero__unit .page-margin {
         max-width: 525px; } }
@@ -3244,28 +3241,34 @@ a {
 .events {
   list-style: none;
   margin: 0; }
-  .events .event h3 {
-    color: #343538; }
-  .events .event .technical-date {
-    display: none; }
-  .events .event .date,
-  .events .event .location {
-    margin-top: 10px; }
-  .events .event .location {
-    margin-bottom: 20px; }
+  .events .event {
+    margin-bottom: 24px; }
+    .events .event h3 {
+      color: #343538; }
+    .events .event .technical-date {
+      display: none; }
+    .events .event .date {
+      margin-top: 1rem; }
+    .events .event .location {
+      margin-top: 1rem; }
+      .events .event .location .adr {
+        margin-bottom: 1rem; }
 
+.supporters .grid, .supporters .grid--rev {
+  margin-top: -1rem; }
 .supporters .supporter {
   border: 1px solid #c2c2c2;
   border-radius: 2px;
-  padding: 1rem; }
+  padding: 1rem;
+  margin-top: 1rem; }
   .supporters .supporter .supporter-logo {
     width: 128px; }
     .supporters .supporter .supporter-logo .supporter-logo__image_box {
       height: 5rem; }
       .supporters .supporter .supporter-logo .supporter-logo__image_box .supporter-logo__image {
         width: 128px; }
-    .supporters .supporter .supporter-logo.asquera {
-      width: 64px; }
+  .supporters .supporter.asquera .supporter-logo__image_box .supporter-logo__image {
+    width: 64px; }
 
 .page-footer {
   color: white;

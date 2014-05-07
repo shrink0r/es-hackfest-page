@@ -29,7 +29,7 @@
         width:100%;
         background: $green1;
         @include retina(){
-            background-image: url(../images/hero_unit_bg_506@2x.jpg);
+            background-image: url(../images/hero_unit_bg_506.jpg);
             background-size: auto 100%;
             background: $green1;
         }
@@ -42,7 +42,7 @@
     @include media-query(lap) {
         background-image: url(../images/hero_unit_bg_1024.jpg);
         padding-top: 90px;
-        min-height: 370px;
+        min-height: 490px;
         .page-margin {
             max-width: 475px;
         }
@@ -51,9 +51,9 @@
         background-image: url(../images/hero_unit_bg_1024.jpg);
         background-size: 100% auto;
         padding-top: 90px;
-        min-height: 315px;
+        min-height: 500px;
         @include retina(){
-            background-image:url(../images/hero_unit_bg.jpg);
+            // background-image:url(../images/hero_unit_bg.jpg);
         }
         .page-margin {
             max-width: 525px;
