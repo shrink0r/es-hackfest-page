@@ -1,13 +1,11 @@
 
 .hero__unit {
     @include vendor (box-shadow, 0 10px 25px rgba(0, 0, 0, 0.15));
-    margin-top: -30px;
-    margin-bottom: 12px;
-    padding-top: 20px;
-    min-height: 325px;
-    height: auto;
-    background: url(../images/hero_unit_bg_640.jpg) no-repeat 53% top scroll $grey-light;
-    background-size: auto auto;
+    margin-bottom: 48px;
+    padding-top: 40px;
+    height: 200px;
+
+    background-color: $green1;
 
     a {
         &:hover {
@@ -24,48 +22,6 @@
         }
     }
 
-    @include media-query(palm) {
-        display:table;
-        width:100%;
-        background: $green1;
-        @include retina(){
-            background-image: url(../images/hero_unit_bg_506.jpg);
-            background-size: auto 100%;
-            background: $green1;
-        }
-        .page-margin {
-            display:table-cell;
-            vertical-align:middle;
-        }
-    }
-
-    @include media-query(lap) {
-        background-image: url(../images/hero_unit_bg_1024.jpg);
-        padding-top: 90px;
-        min-height: 490px;
-        .page-margin {
-            max-width: 475px;
-        }
-    }
-    @include media-query(desk) {
-        background-image: url(../images/hero_unit_bg_1024.jpg);
-        background-size: 100% auto;
-        padding-top: 90px;
-        min-height: 500px;
-        @include retina(){
-            // background-image:url(../images/hero_unit_bg.jpg);
-        }
-        .page-margin {
-            max-width: 525px;
-        }
-    }
-    @include media-query(desk-wide) {
-        background-image: url(../images/hero_unit_bg_2048.jpg);
-        background-position: center 37%;
-        .page-margin {
-            max-width: 750px;
-        }
-    }
 
     h1, h2, h3, h4, h5, h6, p {
         text-align: center;

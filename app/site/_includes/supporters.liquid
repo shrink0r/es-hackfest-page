@@ -1,8 +1,8 @@
 <h2>Run by</h2>
 
 <div class="grid">
-    {% for supporter in site.data.supporters %}
-    <div class="grid__item desk-one-quarter lap-one-third palm-one-whole">
+    {% for supporter in site.data.supporters %}<!--
+   --><div class="grid__item desk-one-quarter lap-one-third palm-one-whole">
         <div class="supporter {{ supporter.name | downcase }}">
             <a href="{{ supporter.url }}">
                 <div class="supporter-logo">
@@ -16,6 +16,6 @@
             </a>
             <span class="supporter-role">{{ supporter.role }}</span>
         </div>
-    </div>
-    {% endfor %}
+    </div><!--
+    -->{% endfor %}
 </div>
