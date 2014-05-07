@@ -1,7 +1,13 @@
 - {
+    name: "Elasticsearch",
+    url: "http://elasticsearch.com",
+    role: "The reason why we are here. Providers of beverages.",
+    logo: "elasticsearch.png",
+}
+- {
     name: "Asquera",
     url: "http://asquera.de",
-    role: "Organizers of the Elasticsearch UG Berlin",
+    role: "Organizers of the Elasticsearch UG Berlin.",
     logo: "asq.png",
 }
 - {
@@ -17,8 +23,8 @@
     logo: "syseleven.png",
 }
 - {
-    name: "Elasticsearch",
-    url: "http://elasticsearch.com",
-    role: "The reason why we are here. Providers of food and beverages.",
-    logo: "elasticsearch.png",
+    name: "ImmobilienScout24",
+    url: "http://www.immobilienscout24.de/",
+    role: "Location and food provider.",
+    logo: "",
 }

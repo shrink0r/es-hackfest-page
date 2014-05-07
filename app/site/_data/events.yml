@@ -13,7 +13,7 @@
     city: "Berlin",
     country: "Germany",
   },
-  description: "If you have any issues installing Elasticsearch, Logstash or Kibana - or just want to have a nice evening with drinks and other Elasticsearchers - you are welcome at our usual Elasticsearch User Group meeting place: co_up (custom Google map)",
+  description: "If you have any issues installing Elasticsearch, Logstash or Kibana - or just want to have a nice evening with drinks and other Elasticsearchers - you are welcome at our usual Elasticsearch User Group meeting place: co.up",
 }
 - {
   name: "main-event",
