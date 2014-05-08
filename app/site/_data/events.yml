@@ -23,7 +23,7 @@
   location: {
     map: {
       image: "http://maps.google.com/maps/api/staticmap?center=52.5125940,13.4311080&zoom=15&size=650x350&maptype=roadmap&sensor=false&language=&markers=color:red|label:none|52.5125940,13.4311080",
-      url: "www.google.de/maps/place/Andreasstraße+10/@52.51246,13.43134,17z",
+      url: "http://www.google.de/maps/place/Andreasstraße+10/@52.51246,13.43134,17z",
     },
     name: "Immobilien Scout GmbH",
     street: "Andreasstraße 10",
