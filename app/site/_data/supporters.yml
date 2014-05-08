@@ -14,7 +14,7 @@
     name: "ImmobilienScout24",
     url: "http://www.immobilienscout24.de/",
     role: "Location and food provider.",
-    logo: "",
+    logo: "immo_scout24.png",
 }
 - {
     name: "Syseleven",
@@ -26,5 +26,5 @@
     name: "BerlinOnline",
     url: "http://berlinonline.net",
     role: "Dataset providers",
-    logo: "",
+    logo: "bo_logo.png",
 }

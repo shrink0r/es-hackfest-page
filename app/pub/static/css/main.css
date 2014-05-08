@@ -3120,7 +3120,8 @@ html.flexbox {
     .headline-xlarge, h1, h1 a {
       font-size: 40px; } }
   .headline-xlarge a, h1 a {
-    color: inherit; }
+    color: inherit;
+    text-decoration: none; }
 
 .headline-medium, h3, h3 a, aside h1 {
   /* "regular" */
@@ -3129,15 +3130,21 @@ html.flexbox {
   @media only screen and (min-width: 800px) {
     .headline-medium, h3, h3 a, aside h1 {
       font-size: 21px; } }
+  .headline-medium a, h3 a, aside h1 a {
+    color: inherit;
+    text-decoration: none; }
 
 .headline-large, h2, h2 a {
   /* "regular" */
   font-weight: 200;
   color: #74b73f;
-  text-shadow: -1px 1px 0 rgba(68, 107, 37, 0.3); }
+  text-shadow: -1px 0px 0 rgba(68, 107, 37, 0.3); }
   @media only screen and (min-width: 800px) {
     .headline-large, h2, h2 a {
       font-size: 30px; } }
+  .headline-large a, h2 a {
+    color: inherit;
+    text-decoration: none; }
 
 .headline-small, aside h2,
 aside h3,
@@ -3222,17 +3229,25 @@ a {
   border-radius: 2px;
   padding: 1rem;
   margin-top: 1rem; }
-  .supporters .supporter .supporter-logo {
-    width: 128px; }
-    .supporters .supporter .supporter-logo .supporter-logo__image_box {
-      height: 5rem; }
-      .supporters .supporter .supporter-logo .supporter-logo__image_box .supporter-logo__image {
-        width: 128px; }
+  .supporters .supporter .supporter-logo .supporter-logo__image_box {
+    height: 5rem;
+    display: table;
+    width: 100%; }
+    .supporters .supporter .supporter-logo .supporter-logo__image_box .image_box__inner {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%; }
+      .supporters .supporter .supporter-logo .supporter-logo__image_box .image_box__inner .supporter-logo__image {
+        width: 128px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5rem;
+        display: block; }
   .supporters .supporter.supporter-main .supporter-logo__image_box {
     height: 2rem; }
     .supporters .supporter.supporter-main .supporter-logo__image_box .supporter-logo__image {
-      width: auto; }
-  .supporters .supporter.asquera .supporter-logo__image_box .supporter-logo__image {
+      width: 200px; }
+  .supporters .supporter.asquera .supporter-logo .supporter-logo__image_box .supporter-logo__image {
     width: 64px; }
 
 .page-footer {

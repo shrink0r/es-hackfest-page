@@ -27,7 +27,9 @@
                 <div class="supporter-logo">
                     <div class="supporter-logo__image_box">
                         {% if supporter.logo != empty %}
-                        <img class="supporter-logo__image" src="static/images/logos/{{ supporter.logo }}" title="{{ supporter.name }}" />
+                        <div class="image_box__inner">
+                            <img class="supporter-logo__image" src="static/images/logos/{{ supporter.logo }}" title="{{ supporter.name }}" />
+                        </div>
                         {% endif %}
                     </div>
                     <span class="supporter-name">{{ supporter.name }}</span>

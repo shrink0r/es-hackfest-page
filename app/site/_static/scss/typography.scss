@@ -25,6 +25,7 @@ $default_font: "Source Sans Pro", Arial, sans-serif;
 
     a {
         color: inherit;
+        text-decoration: none;
     }
 }
 
@@ -32,13 +33,23 @@ $default_font: "Source Sans Pro", Arial, sans-serif;
     @include font-weight(regular);
     @include font-size(18px, 21px);
     color: $green1;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 .headline-large {
     @include font-weight(light);
     @include font-size(26px, 30px);
     color: $green1;
-    text-shadow: -1px 1px 0 rgba($green3, 0.3);
+    text-shadow: -1px 0px 0 rgba($green3, 0.3);
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 .headline-small {
