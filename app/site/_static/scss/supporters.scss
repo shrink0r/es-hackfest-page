@@ -28,6 +28,10 @@
                         margin-right: auto;
                         margin-bottom: 0.5rem;
                         display: block;
+                        @include media-query(palm) {
+                            margin-left: 0;
+                            margin-right: 0;
+                        }
                     }
                 }
             }

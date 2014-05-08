@@ -3190,10 +3190,10 @@ a {
   -ms-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   -o-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background-color: #74b73f;
   margin-bottom: 48px;
   padding-top: 40px;
-  height: 200px;
-  background-color: #74b73f; }
+  height: 200px; }
   .hero__unit a:hover {
     text-decoration: none; }
   .hero__unit a h1 {
@@ -3243,6 +3243,10 @@ a {
         margin-right: auto;
         margin-bottom: 0.5rem;
         display: block; }
+        @media only screen and (max-width: 480px) {
+          .supporters .supporter .supporter-logo .supporter-logo__image_box .image_box__inner .supporter-logo__image {
+            margin-left: 0;
+            margin-right: 0; } }
   .supporters .supporter.supporter-main .supporter-logo__image_box {
     height: 2rem; }
     .supporters .supporter.supporter-main .supporter-logo__image_box .supporter-logo__image {

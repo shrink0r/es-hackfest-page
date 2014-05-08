@@ -1,11 +1,10 @@
 
 .hero__unit {
     @include vendor (box-shadow, 0 10px 25px rgba(0, 0, 0, 0.15));
+    background-color: $green1;
     margin-bottom: 48px;
     padding-top: 40px;
     height: 200px;
-
-    background-color: $green1;
 
     a {
         &:hover {
@@ -17,11 +16,10 @@
         }
 
         p {
-            font-size:120%;
+            font-size: 120%;
             @include font-weight("light");
         }
     }
-
 
     h1, h2, h3, h4, h5, h6, p {
         text-align: center;
