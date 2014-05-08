@@ -29,3 +29,19 @@
     @extend .btn;
     @extend .btn--hard;
 }
+
+.greyscale--full {
+    -webkit-filter: grayscale(95%);
+    -moz-filter: grayscale(95%);
+    -o-filter: grayscale(95%);
+    -ms-filter: grayscale(95%);
+    filter: grayscale(95%);
+}
+
+.greyscale--none {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    filter: grayscale(0%);
+}

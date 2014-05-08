@@ -3112,6 +3112,20 @@ html.flexbox {
     direction: ltr;
     text-align: left; }
 
+.greyscale--full {
+  -webkit-filter: grayscale(95%);
+  -moz-filter: grayscale(95%);
+  -o-filter: grayscale(95%);
+  -ms-filter: grayscale(95%);
+  filter: grayscale(95%); }
+
+.greyscale--none, .supporters .supporter_link:hover .supporter .supporter-logo .supporter-logo__image_box .supporter-logo__image {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  filter: grayscale(0%); }
+
 .headline-xlarge, h1, h1 a {
   /* "regular" */
   font-weight: 200;
@@ -3222,41 +3236,41 @@ a {
       .events .event .location .adr {
         margin-bottom: 1rem; }
 
+.supporters .grid, .supporters .grid--rev {
+  margin-top: -1rem; }
 .supporters .supporter_link {
   text-decoration: none;
   color: inherit; }
-.supporters .grid, .supporters .grid--rev {
-  margin-top: -1rem; }
-.supporters .supporter {
-  padding: 1rem;
-  margin-top: 1rem;
-  text-align: center; }
-  .supporters .supporter .supporter-logo {
-    margin-left: auto;
-    margin-right: auto; }
-    .supporters .supporter .supporter-logo .supporter-logo__image_box {
-      height: 5rem;
-      display: table;
-      width: 100%; }
-      .supporters .supporter .supporter-logo .supporter-logo__image_box .image_box__inner {
-        display: table-cell;
-        vertical-align: middle;
+  .supporters .supporter_link .supporter {
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center; }
+    .supporters .supporter_link .supporter .supporter-logo {
+      margin-left: auto;
+      margin-right: auto; }
+      .supporters .supporter_link .supporter .supporter-logo .supporter-logo__image_box {
+        height: 5rem;
+        display: table;
         width: 100%; }
-        .supporters .supporter .supporter-logo .supporter-logo__image_box .image_box__inner .supporter-logo__image {
-          width: 128px;
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: 0.5rem;
-          display: block; }
-    .supporters .supporter .supporter-logo .supporter-name {
-      color: #74b73f;
-      text-decoration: underline; }
-  .supporters .supporter.supporter-main .supporter-logo__image_box {
-    height: 2rem; }
-    .supporters .supporter.supporter-main .supporter-logo__image_box .supporter-logo__image {
-      width: 200px; }
-  .supporters .supporter.asquera .supporter-logo .supporter-logo__image_box .supporter-logo__image {
-    width: 64px; }
+        .supporters .supporter_link .supporter .supporter-logo .supporter-logo__image_box .image_box__inner {
+          display: table-cell;
+          vertical-align: middle;
+          width: 100%; }
+          .supporters .supporter_link .supporter .supporter-logo .supporter-logo__image_box .image_box__inner .supporter-logo__image {
+            width: 128px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0.5rem;
+            display: block; }
+      .supporters .supporter_link .supporter .supporter-logo .supporter-name {
+        color: #74b73f;
+        text-decoration: underline; }
+    .supporters .supporter_link .supporter.supporter-main .supporter-logo__image_box {
+      height: 2rem; }
+      .supporters .supporter_link .supporter.supporter-main .supporter-logo__image_box .supporter-logo__image {
+        width: 200px; }
+    .supporters .supporter_link .supporter.asquera .supporter-logo .supporter-logo__image_box .supporter-logo__image {
+      width: 64px; }
 
 .page-footer {
   color: white;
@@ -3270,8 +3284,24 @@ a {
   .page-footer a {
     color: white;
     text-decoration: underline; }
-  .page-footer .address {
-    margin-bottom: 0.5rem; }
+  @media only screen and (max-width: 480px) {
+    .page-footer .organizer-label {
+      text-align: center;
+      margin-bottom: 1rem; } }
+  .page-footer .contact {
+    text-align: center;
+    margin-bottom: 1rem; }
+  .page-footer .imprint-link-box {
+    text-align: right; }
+    @media only screen and (max-width: 480px) {
+      .page-footer .imprint-link-box {
+        text-align: center; } }
+  .page-footer .create-attribution {
+    text-align: right; }
+    @media only screen and (max-width: 480px) {
+      .page-footer .create-attribution {
+        text-align: center;
+        margin-top: 1rem; } }
 
 .page-margin {
   max-width: 980px;

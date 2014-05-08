@@ -18,7 +18,32 @@
         text-decoration: underline;
     }
 
-    .address {
-        margin-bottom: 0.5rem;
+    .organizer-label {
+        @include media-query(palm) {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .contact {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .imprint-link-box {
+        text-align: right;
+
+        @include media-query(palm) {
+            text-align: center;
+        }
+    }
+
+    .create-attribution {
+        text-align: right;
+
+        @include media-query(palm) {
+            text-align: center;
+            margin-top: 1rem;
+        }
     }
 }

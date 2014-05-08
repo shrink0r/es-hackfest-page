@@ -1,64 +1,79 @@
 
 .supporters {
 
-    .supporter_link {
-        text-decoration: none;
-        color: inherit;
-    }
-
     .grid {
         margin-top: -1rem;
     }
 
-    .supporter {
-        padding: 1rem;
-        margin-top: 1rem;
-        text-align: center;
+    .supporter_link {
+        text-decoration: none;
+        color: inherit;
 
-        .supporter-logo {
-            margin-left: auto;
-            margin-right: auto;
+        .supporter {
+            padding: 1rem;
+            margin-top: 1rem;
+            text-align: center;
 
-            .supporter-logo__image_box {
-                height: 5rem;
-                display: table;
-                width: 100%;
+            .supporter-logo {
+                margin-left: auto;
+                margin-right: auto;
 
-                .image_box__inner {
-                    display: table-cell;
-                    vertical-align: middle;
+                .supporter-logo__image_box {
+                    height: 5rem;
+                    display: table;
                     width: 100%;
 
+                    .image_box__inner {
+                        display: table-cell;
+                        vertical-align: middle;
+                        width: 100%;
+
+                        .supporter-logo__image {
+                            // comment in to greyout all except the main logo
+                            // and have them colored on mouseover:
+                            // @extend .greyscale--full;
+                            width: 128px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            margin-bottom: 0.5rem;
+                            display: block;
+                        }
+                    }
+                }
+
+                .supporter-name {
+                    color: $green1;
+                    text-decoration: underline;
+                }
+            }
+
+            &.supporter-main {
+                .supporter-logo__image_box {
+                    height: 2rem;
                     .supporter-logo__image {
-                        width: 128px;
-                        margin-left: auto;
-                        margin-right: auto;
-                        margin-bottom: 0.5rem;
-                        display: block;
+                        width: 200px;
                     }
                 }
             }
 
-            .supporter-name {
-                color: $green1;
-                text-decoration: underline;
-            }
-        }
-
-        &.supporter-main {
-            .supporter-logo__image_box {
-                height: 2rem;
-                .supporter-logo__image {
-                    width: 200px;
+            &.asquera {
+                .supporter-logo {
+                    .supporter-logo__image_box {
+                        .supporter-logo__image {
+                            width: 64px;
+                        }
+                    }
                 }
             }
         }
 
-        &.asquera {
-            .supporter-logo {
-                .supporter-logo__image_box {
-                    .supporter-logo__image {
-                        width: 64px;
+        &:hover {
+            .supporter {
+                .supporter-logo {
+                    .supporter-logo__image_box {
+                        .supporter-logo__image {
+                            @extend .greyscale--none;
+                        }
                     }
                 }
             }
