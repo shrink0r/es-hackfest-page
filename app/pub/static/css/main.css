@@ -3222,31 +3222,35 @@ a {
       .events .event .location .adr {
         margin-bottom: 1rem; }
 
+.supporters .supporter_link {
+  text-decoration: none;
+  color: inherit; }
 .supporters .grid, .supporters .grid--rev {
   margin-top: -1rem; }
 .supporters .supporter {
-  border: 1px solid #c2c2c2;
-  border-radius: 2px;
   padding: 1rem;
-  margin-top: 1rem; }
-  .supporters .supporter .supporter-logo .supporter-logo__image_box {
-    height: 5rem;
-    display: table;
-    width: 100%; }
-    .supporters .supporter .supporter-logo .supporter-logo__image_box .image_box__inner {
-      display: table-cell;
-      vertical-align: middle;
+  margin-top: 1rem;
+  text-align: center; }
+  .supporters .supporter .supporter-logo {
+    margin-left: auto;
+    margin-right: auto; }
+    .supporters .supporter .supporter-logo .supporter-logo__image_box {
+      height: 5rem;
+      display: table;
       width: 100%; }
-      .supporters .supporter .supporter-logo .supporter-logo__image_box .image_box__inner .supporter-logo__image {
-        width: 128px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 0.5rem;
-        display: block; }
-        @media only screen and (max-width: 480px) {
-          .supporters .supporter .supporter-logo .supporter-logo__image_box .image_box__inner .supporter-logo__image {
-            margin-left: 0;
-            margin-right: 0; } }
+      .supporters .supporter .supporter-logo .supporter-logo__image_box .image_box__inner {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%; }
+        .supporters .supporter .supporter-logo .supporter-logo__image_box .image_box__inner .supporter-logo__image {
+          width: 128px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 0.5rem;
+          display: block; }
+    .supporters .supporter .supporter-logo .supporter-name {
+      color: #74b73f;
+      text-decoration: underline; }
   .supporters .supporter.supporter-main .supporter-logo__image_box {
     height: 2rem; }
     .supporters .supporter.supporter-main .supporter-logo__image_box .supporter-logo__image {

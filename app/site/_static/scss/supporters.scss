@@ -1,17 +1,24 @@
 
 .supporters {
 
+    .supporter_link {
+        text-decoration: none;
+        color: inherit;
+    }
+
     .grid {
         margin-top: -1rem;
     }
 
     .supporter {
-        border: 1px solid $grey-light;
-        border-radius: 2px;
         padding: 1rem;
         margin-top: 1rem;
+        text-align: center;
 
         .supporter-logo {
+            margin-left: auto;
+            margin-right: auto;
+
             .supporter-logo__image_box {
                 height: 5rem;
                 display: table;
@@ -28,12 +35,13 @@
                         margin-right: auto;
                         margin-bottom: 0.5rem;
                         display: block;
-                        @include media-query(palm) {
-                            margin-left: 0;
-                            margin-right: 0;
-                        }
                     }
                 }
+            }
+
+            .supporter-name {
+                color: $green1;
+                text-decoration: underline;
             }
         }
 
