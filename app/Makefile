@@ -31,6 +31,9 @@ $(css_file):  $(scss_files)
 	@mkdir -p ${@D}
 	@scss --style $(scss_style) site/_static/scss/main.scss $(css_file)
 
+clean:
+	@if [ -d pub ]; then rm -rf pub; fi
+
 .PHONY: deploy all html css
 
 # vim: ts=4:sw=4:noexpandtab!:
