@@ -1,4 +1,4 @@
-## Sign-up
+## [Sign-up](http://www.meetup.com/Elasticsearch-UG-Berlin/events/143792002/)
 
 You need to sign up for the hackfest at:  
 [http://www.meetup.com/Elasticsearch-UG-Berlin/events/143792002/](http://www.meetup.com/Elasticsearch-UG-Berlin/events/143792002/)  

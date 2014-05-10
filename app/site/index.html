@@ -22,6 +22,11 @@ description: Team up and build something cool with Elasticsearch at the hackfest
     {{ signup_text | markdownify }}
 </div>
 
+<div class="projects-teaser">
+    {% capture projects_teaser_text %}{% include texts/projects.md %}{% endcapture %}
+    {{ projects_teaser_text | markdownify }}
+</div>
+
 <div class="code-of-conduct">
     {% capture coc_text %}{% include texts/coc_short.md %}{% endcapture %}
     {{ coc_text | markdownify }}

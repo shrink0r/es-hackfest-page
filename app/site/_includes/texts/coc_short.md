@@ -1,4 +1,4 @@
-## Code of Conduct
+## [Code of Conduct](coc/)
 
 All attendees, speakers, sponsors and volunteers at our hackfest  are required to agree with the following code of conduct.
 Organisers will enforce this code throughout the event.
