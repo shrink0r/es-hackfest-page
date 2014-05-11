@@ -10,12 +10,52 @@
             color: $grey-dark;
         }
 
-        .technical-date {
-            display: none;
-        }
-
         .date {
             margin-top: 1rem;
+
+            .technical-date {
+                display: none;
+            }
+
+            .calendar-date {
+                display: inline-block;
+                margin: 0;
+                width: 4em;
+                height: 71px;
+                background: #efefef;
+                border: 1px solid #d2d2d2;
+                border-radius: 10px;
+
+                .day {
+                    font-family: Helvetica, sans-serif;
+                    font-size: 1.5em;
+                    text-align: center;
+                    color: $grey-lighter;
+
+                    .month {
+                        background: $green1;
+                        font-size: 0.6em;
+                        font-weight: bold;
+                        color: $white;
+                        text-transform: uppercase;
+                        display: block;
+                        border-top: 3px solid $green1;
+                        border-radius: 0 0 10px 10px;
+                        padding: 6px 0 6px 0;
+                    }
+                }
+            }
+
+           .time-wrapper {
+                height: 50px;
+                display: inline-block;
+                margin-left: 1em;
+                margin-top: -1em;
+
+                .start-day {
+                    display: block;
+                }
+            }
         }
 
         .location {

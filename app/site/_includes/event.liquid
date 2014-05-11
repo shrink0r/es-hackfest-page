@@ -4,13 +4,21 @@
     </h2>
     <div class="summary">{{ event.description }}</div>
     <div class="date">
-        <h3>Date</h3>
         <div class="technical-date">
             <span class="dtstart">{{ event.start }}</span>
             <span class="dtend">{{ event.end }}</span>
         </div>
-        <span>{{ event.start | date: "%A, %b %d, %I:%M %p" }}</span> to
-        <span>{{ event.end | date: "%I:%M %p" }}</span>
+        <div class="calendar-date">
+            <p class="day">
+                {{ event.start | date: "%d" }}
+                <span class="month">{{ event.start | date: "%b" }}</span>
+            </p>
+        </div>
+        <div class="time-wrapper">
+            <span class="start-day">{{ event.start | date: "%A" }}</span>
+            <span class="start-time">{{ event.start | date: "%I:%M %p" }}</span> to
+            <span class="end-time">{{ event.end | date: "%I:%M %p" }}</span>
+        </div>
     </div>
     {% assign location = event.location %}
     {% include location.liquid %}
