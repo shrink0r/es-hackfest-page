@@ -9,14 +9,6 @@ description: Team up and build something cool with Elasticsearch at the hackfest
     {{ intro_text | markdownify }}
 </div>
 
-<ul class="events">
-    {% for event in site.data.events %}
-    <li class="event">
-      {% include event.liquid %}
-    </li>
-    {% endfor %}
-</ul>
-
 <div class="signup">
     {% capture signup_text %}{% include texts/signup.md %}{% endcapture %}
     {{ signup_text | markdownify }}
@@ -26,6 +18,15 @@ description: Team up and build something cool with Elasticsearch at the hackfest
     {% capture projects_teaser_text %}{% include texts/projects.md %}{% endcapture %}
     {{ projects_teaser_text | markdownify }}
 </div>
+
+<ul class="events">
+    {% for event in site.data.events %}
+    <li class="event">
+      {% include event.liquid %}
+    </li>
+    {% endfor %}
+</ul>
+
 
 <div class="code-of-conduct">
     {% capture coc_text %}{% include texts/coc_short.md %}{% endcapture %}
