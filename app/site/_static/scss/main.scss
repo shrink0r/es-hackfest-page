@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
-@import "vars";
+@import "_vars";
 @import "inuit.css/inuit";
-@import "addons";
+@import "_addons";
 
-@import "colors";
-@import "typography";
+@import "_colors";
+@import "_typography";
 
-@import "herounit";
-@import "events";
-@import "supporters";
-@import "footer";
+@import "_herounit";
+@import "_events";
+@import "_supporters";
+@import "_footer";
 
 .page-margin {
     max-width: 980px;
@@ -26,6 +26,10 @@
     $gradient-height: 128px;
     background: linear-gradient(to bottom, $gradient-top 0px, $gradient-bottom $gradient-height); /* W3C */
     background: -webkit-linear-gradient(top, $gradient-top 0px, $gradient-bottom $gradient-height); /* W3C */
+
+    .intro {
+        margin-top: 65px;
+    }
 }
 
 .impress {

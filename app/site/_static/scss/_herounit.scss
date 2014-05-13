@@ -6,13 +6,13 @@
     position: relative;
 
     @include media-query(desk) {
-        background-position: -58px top;
+        background-position: -60px top;
     }
     @include media-query(lap) {
-        background-position: -188px top;
+        background-position: -180px top;
     }
     @include media-query(palm) {
-        background-position: -208px top;
+        background-position: -200px top;
     }
 
     .background {
@@ -45,14 +45,14 @@
 
     .hero__unit--logo {
         position: absolute;
-        width: 100px;
-        height: 100px;
+        width: 96px;
+        height: 96px;
         border: 5px solid $green1;
         padding-top: 5px;
         border-radius: 100px;
-        bottom: - 50px;
+        bottom: -48px;
         left: 50%;
-        margin-left: -50px;
+        margin-left: -48px;
         background: $white;
         @include vendor (box-shadow, 0 10px 25px rgba(0, 0, 0, 0.15));
     }
