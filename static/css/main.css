@@ -3209,13 +3209,13 @@ a {
   position: relative; }
   @media only screen and (min-width: 800px) {
     .hero__unit {
-      background-position: -58px top; } }
+      background-position: -60px top; } }
   @media only screen and (min-width: 481px) and (max-width: 799px) {
     .hero__unit {
-      background-position: -188px top; } }
+      background-position: -180px top; } }
   @media only screen and (max-width: 480px) {
     .hero__unit {
-      background-position: -208px top; } }
+      background-position: -200px top; } }
   .hero__unit .background {
     height: 240px;
     padding-top: 40px;
@@ -3235,14 +3235,14 @@ a {
     color: white; }
   .hero__unit .hero__unit--logo {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 96px;
+    height: 96px;
     border: 5px solid #74b73f;
     padding-top: 5px;
     border-radius: 100px;
-    bottom: -50px;
+    bottom: -48px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -48px;
     background: white;
     -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -3376,6 +3376,8 @@ a {
   /* W3C */
   background: -webkit-linear-gradient(top, #f1f1f1 0px, white 128px);
   /* W3C */ }
+  .main .intro {
+    margin-top: 65px; }
 
 .impress .legal {
   margin-top: 24px; }
