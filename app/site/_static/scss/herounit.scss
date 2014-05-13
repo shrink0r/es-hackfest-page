@@ -1,28 +1,59 @@
 
 .hero__unit {
     @include vendor (box-shadow, 0 10px 25px rgba(0, 0, 0, 0.15));
-    background-color: $green1;
+    background: url('../images/hero_unit_bg.jpg') no-repeat left top scroll $grey-light;
     margin-bottom: 48px;
-    padding-top: 40px;
-    height: 200px;
+    position: relative;
 
-    a {
-        &:hover {
+    @include media-query(desk) {
+        background-position: -58px top;
+    }
+    @include media-query(lap) {
+        background-position: -188px top;
+    }
+    @include media-query(palm) {
+        background-position: -208px top;
+    }
+
+    .background {
+        height: 240px;
+        padding-top: 40px;
+        background-color: rgba($green1, 0.9);
+
+        a {
             text-decoration: none;
-        }
 
-        h1 {
-            margin-bottom: 6px;
-        }
+            &:hover {
+                text-decoration: none;
+            }
 
-        p {
-            font-size: 120%;
-            @include font-weight("light");
+            h1 {
+                margin-bottom: 6px;
+            }
+
+            p {
+                font-size: 120%;
+                @include font-weight("light");
+            }
         }
     }
 
     h1, h2, h3, h4, h5, h6, p {
         text-align: center;
         color: $white;
+    }
+
+    .hero__unit--logo {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 5px solid $green1;
+        padding-top: 5px;
+        border-radius: 100px;
+        bottom: - 50px;
+        left: 50%;
+        margin-left: -50px;
+        background: $white;
+        @include vendor (box-shadow, 0 10px 25px rgba(0, 0, 0, 0.15));
     }
 }

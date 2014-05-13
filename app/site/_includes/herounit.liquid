@@ -1,8 +1,13 @@
 <div class="hero__unit">
-    <div class="page-margin">
-        <a href="{{ site.baseurl }}">
-            {% capture herounit_text %}{% include texts/herounit.md %}{% endcapture %}
-            {{ herounit_text | markdownify }}
-        </a>
+    <div class="background">
+        <div class="page-margin">
+            <a href="{{ site.baseurl }}">
+                {% capture herounit_text %}{% include texts/herounit.md %}{% endcapture %}
+                {{ herounit_text | markdownify }}
+            </a>
+        </div>
+    </div>
+    <div class="hero__unit--logo">
+        <img src="static/images/bonsai.png" />
     </div>
 </div>
