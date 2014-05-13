@@ -1,9 +1,14 @@
+scss_style := "compressed"
+jekyll_configs := "config/default.yml"
+
 ifeq ($(HACKFEST_ENV), development)
 	scss_style := "nested"
 	jekyll_configs := "config/default.yml,config/development.yml"
-else
-	scss_style := "compressed"
-	jekyll_configs := "config/default.yml"
+endif
+
+ifeq ($(HACKFEST_ENV), github_pages)
+	scss_style := "nested"
+	jekyll_configs := "config/default.yml,config/github_pages.yml"
 endif
 
 # all scss source files
