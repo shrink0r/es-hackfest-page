@@ -8,30 +8,7 @@ server {
 
   root <%= @docroot %>;
 
-  client_max_body_size <%= @client_max_body_size %>; # set maximum upload size
-
-  <% if @norewrite != "YES" %>
-  location / {
-
-    # change the ? to & to prevent loosing GET parameters in the final rewrite.
-    rewrite ^(.*)\?(.*)$ $1&$2;
-
-    # Everything is directed to index.php, unless the file actually exists within the root.
-    if (!-f $request_filename) {
-        rewrite ^/(.*)$ /index.php?/$1  last;
-        break;
-    }
-
-  }
-  <% end %>
-
-  location ~ \.php($|/|\?) {
-    include /etc/nginx/fastcgi_params;
-    fastcgi_pass   127.0.0.1:9000;
-    fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
-    fastcgi_param  PATH_INFO          $fastcgi_script_name;
-
-    # we need to rewrite the SERVER_NAME since nginx seems to pass the first server_name literally, not expanded
-    fastcgi_param  SERVER_NAME        <%= @server_name %>;
+  location \ {
+    try_files $uri $uri/;
   }
 }
